@@ -13,6 +13,8 @@ import ReactNative, {
   ViewPagerAndroid,
   Platform
 } from 'react-native'
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class'
 
 // Using bare setTimeout, setInterval, setImmediate
 // and requestAnimationFrame calls is very dangerous
@@ -99,32 +101,32 @@ let styles = StyleSheet.create({
 
 // missing `module.exports = exports['default'];` with babel6
 // export default React.createClass({
-module.exports = React.createClass({
+module.exports = createReactClass({
 
   /**
    * Props Validation
    * @type {Object}
    */
   propTypes: {
-    horizontal                       : React.PropTypes.bool,
-    children                         : React.PropTypes.node.isRequired,
+    horizontal                       :PropTypes.bool,
+    children                         :PropTypes.node.isRequired,
     style                            : View.propTypes.style,
-    pagingEnabled                    : React.PropTypes.bool,
-    showsHorizontalScrollIndicator   : React.PropTypes.bool,
-    showsVerticalScrollIndicator     : React.PropTypes.bool,
-    bounces                          : React.PropTypes.bool,
-    scrollsToTop                     : React.PropTypes.bool,
-    removeClippedSubviews            : React.PropTypes.bool,
-    automaticallyAdjustContentInsets : React.PropTypes.bool,
-    showsPagination                  : React.PropTypes.bool,
-    showsButtons                     : React.PropTypes.bool,
-    loop                             : React.PropTypes.bool,
-    autoplay                         : React.PropTypes.bool,
-    autoplayTimeout                  : React.PropTypes.number,
-    autoplayDirection                : React.PropTypes.bool,
-    index                            : React.PropTypes.number,
-    renderPagination                 : React.PropTypes.func,
-    onScroll                         : React.PropTypes.func,
+    pagingEnabled                    :PropTypes.bool,
+    showsHorizontalScrollIndicator   :PropTypes.bool,
+    showsVerticalScrollIndicator     :PropTypes.bool,
+    bounces                          :PropTypes.bool,
+    scrollsToTop                     :PropTypes.bool,
+    removeClippedSubviews            :PropTypes.bool,
+    automaticallyAdjustContentInsets :PropTypes.bool,
+    showsPagination                  :PropTypes.bool,
+    showsButtons                     :PropTypes.bool,
+    loop                             :PropTypes.bool,
+    autoplay                         :PropTypes.bool,
+    autoplayTimeout                  :PropTypes.number,
+    autoplayDirection                :PropTypes.bool,
+    index                            :PropTypes.number,
+    renderPagination                 :PropTypes.func,
+    onScroll                         :PropTypes.func,
   },
 
   mixins: [TimerMixin],
