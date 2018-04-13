@@ -11,7 +11,8 @@ import ReactNative, {
   Dimensions,
   TouchableOpacity,
   ViewPagerAndroid,
-  Platform
+  Platform,
+  ViewPropTypes
 } from 'react-native'
 import PropTypes from 'prop-types';
 import createReactClass from 'create-react-class'
@@ -110,7 +111,7 @@ module.exports = createReactClass({
   propTypes: {
     horizontal                       :PropTypes.bool,
     children                         :PropTypes.node.isRequired,
-    style                            : View.propTypes.style,
+    style                            :ViewPropTypes.style,
     pagingEnabled                    :PropTypes.bool,
     showsHorizontalScrollIndicator   :PropTypes.bool,
     showsVerticalScrollIndicator     :PropTypes.bool,
